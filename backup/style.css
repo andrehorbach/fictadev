@@ -1,0 +1,949 @@
+/* Ficta Stylesheet */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Mukta");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
+@font-face {
+  font-family: "Downcome";
+  src: url("../fonts/DOWNCOME.TTF");
+}
+
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+  background-color: black;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background: url("../img/fictabg2.jpg") no-repeat center center fixed; */
+  background: url("../img/entropia-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  vertical-align: middle;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.headerline {
+  border: 1px solid rgba(41, 41, 41, 0.5);
+  width: 99.8%;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: rgb(241, 237, 236);
+  font-weight: 600;
+  font-family: "Titillium Web", sans-serif;
+}
+h1 {
+  font-size: 70px;
+  color: rgb(241, 237, 236);
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  color: rgb(241, 237, 236);
+  font-size: 12px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 500;
+}
+
+p {
+  font-size: 14px;
+  color: #585858;
+  line-height: 2;
+}
+
+img {
+  max-width: 100%;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+  outline: none;
+}
+
+a:link {
+  text-decoration: none;
+  outline: none;
+  color: rgb(241, 237, 236);
+  font-weight: none;
+}
+
+a:visited {
+  text-decoration: none;
+  outline: none;
+  color: rgb(241, 237, 236);
+  font-weight: none;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: none;
+  color: rgb(205, 24, 216);
+  font-weight: none;
+}
+
+a:selected {
+  text-decoration: none;
+  outline: none;
+  color: rgb(205, 24, 216);
+  font-weight: none;
+}
+
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left: auto; /* 1 */
+  padding-top: 10px;
+  max-width: 65%;
+}
+
+.site-logo {
+  max-width: 200px;
+  position: relative;
+  margin-left: 250px;
+}
+
+.site-logo img {
+  min-width: 40%;
+  max-width: 100%;
+}
+
+.header-social {
+  padding-right: 30px;
+  vertical-align: middle;
+  position: relative;
+  float: right;
+  top: 50px;
+  text-size-adjust: 50%;
+}
+
+.header-social a {
+  display: inline;
+  color: #fff;
+  margin-left: 27px;
+  padding: 9px 0;
+  transition: 0.3s;
+}
+
+.header-social a:hover {
+  color: rgb(205, 24, 216);
+}
+
+/* Side Menu - Botao Inicio */
+.side-menu-btn {
+  display: inline-block;
+  position: relative;
+  left: 30px;
+  margin-top: 30px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.smbbtn {
+  width: 30px;
+  height: 4px;
+  background-color: rgb(241, 237, 236);
+  margin: 6px 0;
+  transition: 0.4s;
+  z-index: 9999;
+}
+
+.btncolor {
+  background-color: rgb(205, 24, 216);
+}
+
+.btncolor2 {
+  background-color: rgb(241, 237, 236);
+}
+
+/* Animação - Menu Hamburger */
+/*
+.change .smbbar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+.change .smbbar2 {
+  opacity: 0;
+}
+
+.change .smbbar3 {
+  -webkit-transform: rotate(45deg) translate(-7px, -7px);
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+*/
+/* Fim animação Menu Hamburger */
+
+/* Side Menu - Botao Fim */
+
+#sidebar {
+  position: fixed;
+  width: 0px;
+  height: 100%;
+  background: rgb(241, 237, 236);
+  cursor: pointer;
+  /*left: -200px; */
+  transition: all 500ms linear;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 18px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: "Titillium Web", sans-serif;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  font-size: 36px;
+  width: 50%;
+}
+
+.sidenav .closebtn {
+  display: inline;
+  position: relative;
+  top: -62px;
+  left: 140px;
+}
+
+.site-logo-menu {
+  width: 100px;
+  margin-top: 50px;
+  display: inline-block;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.eqi-container {
+  border: 10px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+.eqi-container div {
+  width: 50px;
+  height: 50px;
+  background: red;
+}
+
+/* Navbar START */
+.navbar {
+  width: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 500;
+}
+
+.navbar a {
+  float: left;
+  padding: 1.83%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(241, 237, 236);
+  text-decoration: none;
+  min-width: 13%;
+  max-width: 15.4%;
+  text-align: center; /* If you want the text to be centered */
+}
+
+.navbar a:hover {
+  transition: 0.3s;
+  background-color: rgba(85, 85, 85, 0.5);
+  color: rgb(205, 24, 216);
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left; /* If you want the text to be left-aligned on small screens */
+  }
+}
+
+/* Navbar END */
+
+/* Capa e site Btn Começo */
+
+/* ----- capa (parte central) ----- */
+
+.linebreak {
+  position: static;
+  width: 100%;
+}
+
+.capa-splash {
+  width: 100%;
+  margin: -10px -10px;
+  padding: 0px 0px 0px 0px;
+  padding-top: 100px;
+  max-width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.capa-splash img {
+  max-width: 25%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+.capa-section {
+  text-align: center;
+  max-width: 40%;
+  margin: 0 auto; /* centraliza */
+  margin-top: 100px;
+  display: block;
+  /* position: static; */
+}
+
+.capa-warp img {
+  position: relative;
+  max-width: 60%;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+
+/* ----- Buttons ----- */
+
+.site-btn {
+  display: inline-block;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  min-width: 126px;
+  background: transparent;
+  color: rgb(241, 237, 236);
+  line-height: normal;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  font-family: "Titillium Web", sans-serif;
+  margin-bottom: 50px;
+}
+
+.site-btn:hover {
+  transition: 0.3s;
+  background: rgba(141, 137, 136, 0.2);
+  color: rgb(205, 24, 216);
+}
+
+.site-btn a {
+  transition: 0.3s;
+}
+
+.site-btn:after,
+.site-btn:before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 14px;
+}
+
+.site-btn:before {
+  border-top: 2px solid rgb(161, 161, 161);
+  border-left: 2px solid rgb(161, 161, 161);
+  left: 0;
+  top: 0;
+}
+
+.site-btn:after {
+  border-top: 2px solid rgb(161, 161, 161);
+  border-right: 2px solid rgb(161, 161, 161);
+  right: 0;
+  top: 0;
+}
+
+.site-btn span {
+  display: block;
+  padding: 16px 15px;
+}
+
+.site-btn span:hover {
+  transition: 0.3s;
+  background: rgba(141, 137, 136, 0.2);
+  color: rgb(205, 24, 216);
+}
+
+.site-btn span:after,
+.site-btn span:before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 14px;
+}
+
+.site-btn span:before {
+  border-bottom: 2px solid rgb(161, 161, 161);
+  border-left: 2px solid rgb(161, 161, 161);
+  left: 0;
+  bottom: 0;
+}
+
+.site-btn span:after {
+  border-bottom: 2px solid rgb(161, 161, 161);
+  border-right: 2px solid rgb(161, 161, 161);
+  right: 0;
+  bottom: 0;
+}
+
+.site-btn.sb-dark {
+  color: #000;
+}
+
+.site-btn.sb-dark:before {
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+}
+
+.site-btn.sb-dark:after {
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.site-btn.sb-dark span:before {
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+}
+
+.site-btn.sb-dark span:after {
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+/* Index menu components START */
+
+.indexsquare {
+  border-top: 4px solid rgba(100, 100, 100, 0.2);
+  border-left: 4px solid rgba(70, 70, 70, 0.1);
+  border-right: 4px solid rgba(10, 10, 10, 0.5);
+  border-bottom: 4px solid rgba(10, 10, 10, 0.75);
+
+  max-width: 70%;
+  margin: auto;
+}
+
+.indexmenu {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15;
+  background: url("../img/ficta02a.jpg") no-repeat top center;
+  height: 400px;
+  min-height: 200px;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3vw;
+}
+
+.index-menu-btn1 {
+  display: inline-block;
+  position: relative;
+  left: 30px;
+  margin-top: 30px;
+  top: -15px;
+  cursor: pointer;
+}
+
+.index-menu-btn2 {
+  display: inline-block;
+  position: relative;
+  left: 30px;
+  margin-top: 30px;
+  top: -15px;
+  cursor: pointer;
+}
+
+.indbtn {
+  width: 30px;
+  height: 4px;
+  margin: 6px 0;
+  transition: 0.4s;
+  z-index: 9999;
+}
+
+.indcolor {
+  background-color: rgb(205, 24, 216);
+}
+
+.index-main-btn {
+  display: inline-block;
+  border: none;
+  font-size: 70%;
+  font-weight: 500;
+  background: transparent;
+  line-height: normal;
+  cursor: pointer;
+  position: relative;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.index-main-btn:hover {
+  transition: 0.3s;
+  background: rgba(141, 137, 136, 0.2);
+  color: rgb(205, 24, 216);
+}
+
+.index-main-btn a {
+  font-size: 140%;
+}
+
+.index-main-btn:after,
+.index-main-btn:before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 14px;
+}
+
+.index-main-btn:before {
+  border-top: 2px solid rgb(161, 161, 161);
+  border-left: 2px solid rgb(161, 161, 161);
+  left: 0;
+  top: 0;
+}
+
+.index-main-btn:after {
+  border-top: 2px solid rgb(161, 161, 161);
+  border-right: 2px solid rgb(161, 161, 161);
+  right: 0;
+  top: 0;
+}
+
+.index-main-btn span {
+  display: block;
+  padding: 16px 15px;
+}
+
+.index-main-btn span:after,
+.index-main-btn span:before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 14px;
+}
+
+.index-main-btn span:before {
+  border-bottom: 2px solid rgb(161, 161, 161);
+  border-left: 2px solid rgb(161, 161, 161);
+  left: 0;
+  bottom: 0;
+}
+
+.index-main-btn span:after {
+  border-bottom: 2px solid rgb(161, 161, 161);
+  border-right: 2px solid rgb(161, 161, 161);
+  right: 0;
+  bottom: 0;
+}
+
+.index-main-btn.sb-dark {
+  color: #000;
+}
+
+.index-main-btn.sb-dark:before {
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+}
+
+.index-main-btn.sb-dark:after {
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.index-main-btn.sb-dark span:before {
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+}
+
+.index-main-btn.sb-dark span:after {
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+/* Index menu components END */
+
+.parentbtn {
+  margin-top: 100px;
+  text-align: center;
+  margin: 0 auto; /* centraliza */
+  /* margin-top: 200px; */
+  position: relative;
+  font-size: 0;
+  min-width: 10%;
+  min-height: 5%;
+  max-width: 26%;
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.parentbtn:hover .parentbtn-highlight {
+  transition-property: background-color;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1vw;
+  text-align: left;
+  color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  left: 0px;
+  padding: 15px;
+  box-sizing: border-box;
+  opacity: 1;
+  cursor: pointer;
+}
+.parentbtn-highlight:hover {
+  background-color: rgba(241, 237, 236, 0.82);
+  transition: 0.6s;
+}
+
+/* Caption text */
+.text-menu {
+  color: #f2f2f2;
+  font-size: 13px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.slide-main-btn {
+  position: absolute;
+  font-size: 250%;
+  width: 100%;
+  text-align: center;
+  margin-top: 35%;
+  padding-bottom: 10px;
+  padding-top: 8px;
+  bottom: 1px;
+  font-family: "Downcome", sans-serif;
+  font-weight: 100;
+  color: rgb(241, 237, 236);
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.slide-main-btn:hover {
+  color: rgb(205, 24, 216);
+  transition: 0.3s ease;
+}
+
+.slide-main-btne {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: 35%;
+  padding-bottom: 10px;
+  padding-top: 8px;
+  bottom: 1px;
+  right: 0px;
+  left: 0.5px;
+  font-family: "Downcome", sans-serif;
+  font-weight: 100;
+  color: rgba(250, 246, 43, 0.7);
+  text-shadow: 2px 0 yellow -1px 0 yellow, -2px 0 green;
+  animation: crt-me 500ms infinite linear alternate-reverse;
+}
+
+.slide-main-btne:hover {
+  color: yellow;
+  transition: 0.3s ease;
+}
+
+/* Entropia Keyframes */
+@keyframes crt-me {
+  0% {
+    clip: rect(21px, 9999px, 24px, 0);
+  }
+  10% {
+    clip: rect(82px, 9999px, 36px, 0);
+  }
+  20% {
+    clip: rect(45px, 9999px, 47px, 0);
+  }
+  30% {
+    clip: rect(17px, 9999px, 67px, 0);
+  }
+  40% {
+    clip: rect(44px, 9999px, 38px, 0);
+  }
+  50% {
+    clip: rect(31px, 9999px, 25px, 0);
+  }
+  60% {
+    clip: rect(59px, 9999px, 35px, 0);
+  }
+  70% {
+    clip: rect(24px, 9999px, 45px, 0);
+  }
+  80% {
+    clip: rect(68px, 9999px, 29px, 0);
+  }
+  90% {
+    clip: rect(33px, 9999px, 66px, 0);
+  }
+  100% {
+    clip: rect(52px, 9999px, 24px, 0);
+  }
+}
+
+/* entropia reflection 3d */
+
+.reflection-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  &:before {
+    content: "Hover me ➜";
+    color: #fff;
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    font-size: 6vh;
+    transform: translateX(-100%) translateY(-50%);
+  }
+  .reflection-content {
+    height: 80vh;
+    width: 80vh;
+    background: #000 url(https://unsplash.it/800/800/?random);
+    background-size: cover;
+    background-position: center;
+    transform: rotateX(0) rotateY(0);
+    pointer-events: none;
+    transition: 100ms linear transform;
+    overflow: hidden;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      left: -50%;
+      top: -50%;
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+    }
+  }
+  .reflection-grid-cell {
+    position: absolute;
+    z-index: 1;
+    width: 10%;
+    height: 10%;
+  }
+  @for $r from 1 to 11 {
+    @for $c from 1 to 11 {
+      .reflection-grid-cell-#{( ($r*10) + $c - 10)} {
+        top: ($r * 10%)-10%;
+        left: ($c * 10%)-10%;
+      }
+      .reflection-grid-cell-#{( ($r*10) + $c - 10)}:hover
+        ~ .reflection-content {
+        transform: rotateX((($r * -5)+25deg)) rotateY((-25deg+ ($c * 5)));
+        &:before {
+          transform: translateY(25- (5% * $r));
+        }
+      }
+    }
+  }
+}
+
+/* Slideshow CSS start */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  max-height: 373px;
+  position: relative;
+  margin: auto;
+  border-top: 0px solid rgba(0, 0, 0, 0.8);
+  border-right: 0px solid rgba(0, 0, 0, 0.8);
+  border-left: 0px solid rgba(0, 0, 0, 0.8);
+  border-bottom: 0px solid rgba(0, 0, 0, 0.8);
+  background-image: url("/img/fictamenucompl.jpg");
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  opacity: 1;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+
+/* Number text (1/3 etc)
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+*/
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slideshow CSS end */
+
+/* Capa e site btn fim */
+
+/* ----- Footer Section ----- */
+.capa-splash img {
+  max-width: 60%;
+}
+
+.footer-section {
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  width: 60%;
+  text-align: center;
+}
+
+.footer-copy p {
+  margin: 0 auto;
+  text-align: center;
+  color: rgba(241, 237, 236, 0.8);
+  font-size: 14px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 500;
+  display: block;
+  -webkit-font-smooth: always;
+}

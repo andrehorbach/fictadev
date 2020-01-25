@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ficta Test Website</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="André Horbach">
+  <meta name="description" content="Ficta Test Again">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link href="img/flogo.ico" rel="shortcut icon" />
+  <style>
+    
+ body {
+	height: 100%;
+	font-family: "Futura", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+  background-color: black;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: url("img/fictabg2.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#parent {
+  margin-top: 100px;
+  text-align: center;
+  margin: 0 auto; /* centraliza */
+  /* margin-top: 200px; */
+	position: relative;
+  font-size: 0;
+  min-width: 480px;
+  min-height: 135px;
+  display: inline-block;
+  z-index: 999;
+  border: 2px solid yellow;
+  
+}
+   .parent-highlight {
+    display: hidden;
+    cursor: pointer;
+    border: 2px solid green;  
+    width:100%;
+    height:100%;
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 18px;
+    text-align:center;
+    vertical-align: middle;
+  
+}
+    
+#parent:hover .parent-highlight {
+    cursor: pointer;
+    background-color: rgba(241,237,236,0.8);
+    border: 2px solid purple;
+    color: black;
+    width:100%;
+    height:100%;
+    position:absolute;
+    display: inline-block;
+    left: 0px;
+    font-size: 18px;
+    text-align:center;
+    vertical-align: middle;
+}
+    
+    
+
+</style>
+</head>
+<body>
+    <div style="margin-top: 300px;"></div>
+
+  
+  <!-- Change on Hover Start -->  
+   
+
+<div id="parent"> 
+      <a href="sobre.html">
+          <img src="img/btn1m.jpg" alt="">
+       </a> <div class="parent-highlight" style=""><img src="img/btn2m.jpg" alt="">
+       </div>
+  </div>  
+  <!-- Change on Hover End -->    
+ </body>
+ </html>
+  
+  
+  
+  
+  
